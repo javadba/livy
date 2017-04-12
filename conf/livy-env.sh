@@ -21,12 +21,16 @@
 # - JAVA_HOME       Java runtime to use. By default use "java" from PATH.
 # - HADOOP_CONF_DIR Directory containing the Hadoop / YARN configuration to use.
 # - SPARK_HOME      Spark which you would like to use in Livy.
+export SPARK_HOME=/shared/spark
+export SPARK_CONF_DIR=/shared/spark/conf
 # - SPARK_CONF_DIR  Optional directory where the Spark configuration lives.
 #                   (Default: $SPARK_HOME/conf)
 # - LIVY_LOG_DIR    Where log files are stored. (Default: ${LIVY_HOME}/logs)
+export LIVY_LOG_DIR=/data/logs/livy
 # - LIVY_PID_DIR    Where the pid file is stored. (Default: /tmp)
 # - LIVY_SERVER_JAVA_OPTS  Java Opts for running livy server (You can set jvm related setting here,
 #                          like jvm memory/gc algorithm and etc.)
+export LIVY_SERVER_JAVA_OPTS="-Xmx4096m"
 # - LIVY_IDENT_STRING A name that identifies the Livy server instance, used to generate log file
 #                     names. (Default: name of the user starting Livy).
 # - LIVY_MAX_LOG_FILES Max number of log file to keep in the log directory. (Default: 5.)
